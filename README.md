@@ -188,6 +188,17 @@ python main.py 000001 --format json --output analysis_report.json
 - `--max-steps` - 每个智能体的最大步数（默认: 3）
 - `--debate-rounds` - Battle环境辩论轮数（默认: 2）
 
+### Termux 自动推荐分析
+
+在支持 Termux 的安卓设备上，可运行 `termux_auto_analysis.py` 脚本自动搜索
+近期政策新闻和市场推荐股票，并调用六位专家辩论给出短线（一个月内）建议：
+
+```bash
+python termux_auto_analysis.py
+```
+
+脚本只会筛选上证与深证股票代码，排除创业板及科创板（如 300xxx、688xxx）。
+
 ## 项目结构
 
 FinGenius 的系统架构以分层解耦与模块化协同为核心，通过明确的接口规范，构建了一个既健壮稳定又易于扩展的智能分析平台。
